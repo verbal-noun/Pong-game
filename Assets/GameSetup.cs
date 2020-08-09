@@ -44,6 +44,11 @@ public class GameSetup : MonoBehaviour
         rightWall.offset = new Vector2(mainCamera.ScreenToWorldPoint(new Vector3(
             Screen.width, 0f, 0f)).x + 0.5f, 0f);
 
+        // Player positions 
+        player1.position.Set(mainCamera.ScreenToWorldPoint(new Vector3(
+            50f, 0f, 0f)).x, 0f, 0f);
+        player2.position.Set(mainCamera.ScreenToWorldPoint(new Vector3(
+            Screen.width - 50f, 0f, 0f)).x, 0f, 0f);
     }
 
     // Update is called once per frame
