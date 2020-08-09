@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
             rigidBody.velocity = new Vector2(0.0f, -speed);
         } 
         else
+        // Stop player when key is not pressed 
         {
             rigidBody.velocity = new Vector2(0.0f, 0.0f);
         }
