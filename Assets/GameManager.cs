@@ -20,14 +20,12 @@ public class GameManager : MonoBehaviour
             playerScore2 += 1;
         }
 
-        Debug.Log("Player 1:" + playerScore1);
-        Debug.Log("Player 2:" + playerScore2);
     }
 
     private void OnGUI()
     {
         GUI.skin = skin;
-        GUI.Label (new Rect( Screen.width / 2 - 150, 25, 100, 100), "" + playerScore1);
-        GUI.Label(new Rect(Screen.width / 2 + 150, 25, 100, 100), "" + playerScore2);
+        GUI.Label (new Rect( Screen.width / 2 - 100-10, 25, 100, 100), "" + playerScore1);
+        GUI.Label(new Rect(Screen.width / 2 + 100-10, 25, 100, 100), "" + playerScore2);
     }
 }
