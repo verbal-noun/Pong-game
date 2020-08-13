@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    static int playerScore1;
-    static int playerScore2; 
+    static int playerScore1 = 0;
+    static int playerScore2 = 0;
+
+    public GUISkin skin; 
 
     public static void Score(string wallname)
     {
@@ -20,5 +22,12 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("Player 1:" + playerScore1);
         Debug.Log("Player 2:" + playerScore2);
+    }
+
+    private void OnGUI()
+    {
+        GUI.skin = skin;
+        GUI.Label (new Rect( Screen.width / 2 - 150, 25, 100, 100), "" + playerScore1);
+        GUI.Label(new Rect(Screen.width / 2 + 150, 25, 100, 100), "" + playerScore2);
     }
 }
